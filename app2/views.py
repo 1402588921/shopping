@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render
-from models import UserBaseInfo
+from django.shortcuts import render, redirect
+from django.views import View
 
 
 def index(request: HttpRequest, year):
@@ -40,15 +40,10 @@ def test_render(request: HttpRequest):
     return render(
         request,
         '2/test_render.html',
-        dict(info='Hello Django'),
+        dict(info='傻逼'),
         content_type='text/html'
     )
 
 
-def test_redirect_model(request: HttpRequest, id: int):
-    user = UserBaseInfo.objects.get(id=id)
-
-
-def userinfo(request: HttpRequest, id: int):
-    user = UserBaseInfo.objects.get(id=id)
-    return HttpResponse('编号' + str(user.id) + '姓名' + user.username)
+def test_redirect(request: HttpRequest, id: int):
+    return redirect('https://www.baidu.com')

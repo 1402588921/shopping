@@ -15,7 +15,7 @@ class UserBaseInfo(models.Model):
         return str(self.id)
 
     def get_absolute_url(self):
-        return reverse("app2_userinfo", kwargs={"pk==id": self.pk})
+        return reverse("app2_userinfo", kwargs=dict(id=self.pk))
 
     class Meta:
         verbose_name = '人员信息'

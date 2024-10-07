@@ -11,4 +11,9 @@ urlpatterns = [
     path('app2/test_post/', views.test_post),
     path('app2/test_response/', views.test_response),
     path('app2/test_render/', views.test_render),
+    path(
+        'app2/test_redirect_views/<int:id>',
+        views.test_redirect,
+        name='app2_test_redirect_views'
+    )
 ]
