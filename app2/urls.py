@@ -15,5 +15,5 @@ urlpatterns = [
         'app2/test_redirect_views/<int:id>',
         views.test_redirect,
         name='app2_test_redirect_views'
-    )
+    ),
 ]

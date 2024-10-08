@@ -1,0 +1,14 @@
+{% if age < 18 %}
+    <p>还未成年</p>
+{% elif age == 18 %}
+    <p>恭喜</p>
+{% else %}
+    <p>恭喜你成年了，亚历山大</p>
+{% endif %}
+
+
+{% for list in lists %}
+    {{ list }}P
+{% empty %}
+    <p>可迭代对象为空</p>
+{% endfor %}
