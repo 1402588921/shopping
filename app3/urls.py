@@ -4,5 +4,7 @@ from app3 import views
 
 urlpatterns = [
     path('vars/', views.var),
-    path('test_control/<int:age>', views.test_control),
+    path('test_control/<int:age>/', views.test_control),
+    path('for_label/', views.for_label),
+    path('filter', views.filter),
 ]

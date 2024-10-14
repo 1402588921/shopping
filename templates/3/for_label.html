@@ -1,0 +1,13 @@
+<table border=1>
+    {% for list in lists %}
+        {% if forloop.first %}
+            <tr><td>第一个值: {{ list.name }}</td></tr>
+        {% endif %}
+        <tr><td>当前值: {{ list.name }}价格：{{list.price }}，当前的正序索引：{{ forloop.counter0 }}，当前的逆序索引：{{ forloop.revcounter0 }}</td></tr>
+
+        {% if forloop.last %}
+            <tr><td>最后一个值：{{ list.name }}</td></tr>
+        {% endif %}
+    
+    {% endfor %}
+</table>
