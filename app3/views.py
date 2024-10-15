@@ -30,3 +30,17 @@ def filter(request: HttpRequest):
     return render(request, '3/filter.html', dict(
         s1=s1, s2=s2, slice_str=slice_str, time_str=time_str
     ))
+
+
+def html_filter(request: HttpRequest):
+    table = '<table border=1><tr><td>我是一个表格</table></tr></td>'
+    script = ("<script language='javascript'>"
+              "document.write('过来了还是可以的');</script>")
+    return render(request, '3/html_filter.html', dict(
+        table=table, script=script
+    ))
+
+
+def custom_filter(request: HttpRequest):
+    warrior = ['张飞', '关羽', '赵云']
+    return render(request, '3/custom_filter.html', dict(warrior=warrior))
