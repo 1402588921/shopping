@@ -44,3 +44,12 @@ def html_filter(request: HttpRequest):
 def custom_filter(request: HttpRequest):
     warrior = ['张飞', '关羽', '赵云']
     return render(request, '3/custom_filter.html', dict(warrior=warrior))
+
+
+def custom_tags(request: HttpRequest):
+    warrior = ['张飞', '关羽', '赵云']
+    return render(request, '3/custom_tag.html', dict(warrior=warrior))
+
+
+def show_info_tag(request: HttpRequest):
+    return render(request, '3/show_info_tag.html')
