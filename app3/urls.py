@@ -11,4 +11,5 @@ urlpatterns = [
     path('custom_filter/', views.custom_filter),
     path('custom_tags/', views.custom_tags),
     path('show_info_tag/', views.show_info_tag),
+    path('welcome/', views.welcome),
 ]

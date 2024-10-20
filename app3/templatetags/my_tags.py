@@ -13,7 +13,8 @@ def max_len(value: typing.Any, n: int):
         return value
 
 
-@register.inclusion_tag('3/show_info_tags.html')
+@register.inclusion_tag('3/diy_tags.html')
 def show_info_tags():
+    # 调用这个HTML就相当于是调用这段渲染后的html
     warrior = ['张飞', '关羽', '赵云']
     return dict(warrior=warrior)

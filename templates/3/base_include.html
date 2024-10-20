@@ -1,0 +1,15 @@
+{% block title %}
+    <title>这是母版页</title>
+{% endblock title %}
+
+<table border=1 style="width: 98vw; height: 98vh; text-align: center;">
+    <tr><td colspan="2">这是TOP区域，一般用于导航</td></tr>
+    <tr><td colspan="2">{% include "3/top.html" %}</td></tr>
+    <tr>
+        <td>这是左边的菜单</td>
+        {% block td %}
+            <td>这个区域的内容随着内容的变化而变化</td>
+        {% endblock td %}
+    </tr>
+    <tr><td colspan="2">这是版权区域</td></tr>
+</table>

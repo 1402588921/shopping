@@ -53,3 +53,7 @@ def custom_tags(request: HttpRequest):
 
 def show_info_tag(request: HttpRequest):
     return render(request, '3/show_info_tag.html')
+
+
+def welcome(request: HttpRequest):
+    return render(request, '3/welcome.html')
